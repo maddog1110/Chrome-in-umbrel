@@ -1,11 +1,11 @@
-FROM zenika/alpine-chrome:latest
-
-# Set environment variables
-ENV DISPLAY=:99
-ENV VNC_PASSWORD=password
-
-# Expose VNC port
-EXPOSE 5900
-
-# Command to start Chromium with VNC
-CMD ["--no-sandbox", "--remote-debugging-port=9222"]
+version: '3'
+services:
+  chromium:
+    image: zenika/alpine-chrome:latest
+    environment:
+      - DISPLAY=:99
+    ports:
+      - "5900:5900"  # For VNC access
+    volumes:
+      - ./data:/data
+    command: ["--no-sandbox", "--remote-debugging-port=9222"]
