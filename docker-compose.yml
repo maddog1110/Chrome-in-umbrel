@@ -1,0 +1,21 @@
+version: '3.7'
+services:
+  chrome:
+    image: lscr.io/linuxserver/chrome:latest
+    container_name: umbrel-chrome
+    security_opt:
+      - seccomp=unconfined #optional
+    environment:
+      - PUID=1000
+      - PGID=1000
+      - TZ=Etc/UTC
+      - CHROME_CLI=--disable-dev-shm-usage --no-sandbox #optional
+      - CUSTOM_PORT=3000 #optional
+      - CUSTOM_USER=abc #optional
+      - CUSTOM_PASS=abc #optional
+    volumes:
+      - ./config:/config
+    ports:
+      - 3000:3000 #optional
+      - 3001:3001 #optional
+    restart: unless-stopped

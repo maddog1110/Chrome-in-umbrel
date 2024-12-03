@@ -1,0 +1,14 @@
+name: "Chromium Browser"
+slug: "chromium-browser"
+version: "1.0.0"
+description: "Run a Chromium-based browser in a Docker container with secure remote access"
+category: "General"
+port: 3000
+developer: "LinuxServer.io"
+website: "https://hub.docker.com/r/linuxserver/chrome"
+submitter: "Your Name"
+repo: "https://github.com/maddog1110/Chrome-in-umbrel"
+support: "https://github.com/maddog1110/Chrome-in-umbrel/issues"
+dependencies: []
+install:
+  docker-compose: "./docker-compose.yml"
