@@ -1,21 +1,13 @@
 version: '3.7'
 services:
   chrome:
-    image: lscr.io/linuxserver/chrome:latest
+    image: selenium/standalone-chrome:latest
     container_name: umbrel-chrome
-    security_opt:
-      - seccomp=unconfined #optional
+    shm_size: '2gb'
     environment:
-      - PUID=1000
-      - PGID=1000
-      - TZ=Etc/UTC
-      - CHROME_CLI=--disable-dev-shm-usage --no-sandbox #optional
-      - CUSTOM_PORT=3000 #optional
-      - CUSTOM_USER=abc #optional
-      - CUSTOM_PASS=abc #optional
-    volumes:
-      - ./config:/config
+      - SE_NODE_SESSION_TIMEOUT=999999
+      - SE_NODE_MAX_SESSIONS=1
     ports:
-      - 3000:3000 #optional
-      - 3001:3001 #optional
+      - "4444:4444"  # Selenium port
+      - "7900:7900"  # noVNC port
     restart: unless-stopped
