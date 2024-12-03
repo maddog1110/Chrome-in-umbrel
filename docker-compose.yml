@@ -1,13 +1,22 @@
 version: '3.7'
 services:
   chrome:
-    image: selenium/standalone-chrome:latest
+    image: kasmweb/chrome:1.13.1
     container_name: umbrel-chrome
-    shm_size: '2gb'
+    security_opt:
+      - seccomp=unconfined
     environment:
-      - SE_NODE_SESSION_TIMEOUT=999999
-      - SE_NODE_MAX_SESSIONS=1
+      - KASM_USER=admin
+      - KASM_PASS=umbrel123
+      - VNC_PW=umbrel123
+      - STARTUP_URL=https://google.com
+      - KASM_VNC_PATH=/
+      - KASM_SSL_CERT_TYPE=none
+      - KASM_KEYBOARD=en-us-qwerty
+    shm_size: '2gb'
     ports:
-      - "4444:4444"  # Selenium port
-      - "7900:7900"  # noVNC port
+      - "6901:6901"
+      - "6902:6902"
+    cap_add:
+      - NET_ADMIN
     restart: unless-stopped

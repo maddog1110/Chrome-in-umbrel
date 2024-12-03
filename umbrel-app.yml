@@ -1,11 +1,11 @@
-name: "Chromium Browser"
-slug: "chromium-browser"
+name: "Chrome Browser"
+slug: "chrome-browser"
 version: "1.0.0"
-description: "Run a Chromium-based browser in a Docker container with secure remote access via noVNC"
+description: "Run Chrome browser with Kasmweb's secure desktop environment"
 category: "General"
-port: 7900
-developer: "Selenium"
-website: "https://github.com/SeleniumHQ/docker-selenium"
+port: 6901
+developer: "Kasmweb"
+website: "https://www.kasmweb.com/"
 submitter: "maddog11010"
 repo: "https://github.com/maddog1110/Chrome-in-umbrel"
 support: "https://github.com/maddog1110/Chrome-in-umbrel/issues"
