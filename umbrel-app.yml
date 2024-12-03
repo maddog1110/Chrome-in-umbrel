@@ -3,7 +3,7 @@ slug: "chrome-browser"
 version: "1.0.0"
 description: "Run Chrome browser with Kasmweb's secure desktop environment"
 category: "General"
-port: 6901
+port: 3000
 developer: "Kasmweb"
 website: "https://www.kasmweb.com/"
 submitter: "maddog11010"

@@ -1,22 +1,27 @@
 version: '3.7'
 services:
   chrome:
-    image: kasmweb/chrome:1.13.1
+    image: kasmweb/chrome:1.13.1-rolling
     container_name: umbrel-chrome
     security_opt:
       - seccomp=unconfined
     environment:
       - KASM_USER=admin
       - KASM_PASS=umbrel123
-      - VNC_PW=umbrel123
+      - VNC_PW=password123
       - STARTUP_URL=https://google.com
       - KASM_VNC_PATH=/
       - KASM_SSL_CERT_TYPE=none
       - KASM_KEYBOARD=en-us-qwerty
+      - LANG=en_US.UTF-8
+      - KASMVNC_AUTO_RECOVER=true
     shm_size: '2gb'
+    volumes:
+      - /dev/shm:/dev/shm
     ports:
       - "6901:6901"
       - "6902:6902"
+      - "3000:3000"
     cap_add:
       - NET_ADMIN
     restart: unless-stopped
