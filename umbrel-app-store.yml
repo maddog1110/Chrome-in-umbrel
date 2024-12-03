@@ -1,2 +1,8 @@
-id: "sparkles" # Choose the ID for your app store. This should contain only alphabets ("a to z") and dashes ("-").
-name: "Sparkles" # Choose the name of your app store. It will show up in the UI as "<name> App Store".
+name: "Chromium Browser"
+slug: "chromium-browser"
+version: "1.0.0"
+description: "Run a Chromium-based browser in a Docker container accessible via VNC."
+category: "General"
+repository: "https://github.com/maddog1110/Chrome-in-umbrel"
+install:
+  docker-compose: "./docker-compose.yml"
