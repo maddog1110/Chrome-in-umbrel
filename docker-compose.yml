@@ -3,8 +3,6 @@ services:
   chrome:
     image: lscr.io/linuxserver/chromium:latest
     container_name: umbrel-chrome
-    security_opt:
-      - seccomp=unconfined
     environment:
       - PUID=1000
       - PGID=1000
@@ -13,13 +11,6 @@ services:
       - CUSTOM_PORT=3000
       - CUSTOM_USER=admin
       - CUSTOM_PASS=umbrel123
-      - VNC_PW=password123
-      - STARTUP_URL=https://google.com
-      - LANG=en_US.UTF-8
-      - KASMVNC_AUTO_RECOVER=true
-      - KASM_SSL_CERT_TYPE=selfsigned
-      - KASM_HOST=0.0.0.0
-    shm_size: '2gb'
     ports:
       - "3000:3000"
     restart: unless-stopped

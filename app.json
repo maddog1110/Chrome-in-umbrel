@@ -1,0 +1,25 @@
+{
+    "id": "chromium-browser",
+    "name": "Chromium Browser",
+    "version": "1.0.0",
+    "category": "General",
+    "description": "A full-featured Chromium browser with secure remote access. Perfect for browsing the web from any device, with built-in security and easy access through your Umbrel.",
+    "developer": "LinuxServer.io",
+    "website": "https://hub.docker.com/r/linuxserver/chromium",
+    "dependencies": [],
+    "repo": "https://github.com/maddog1110/Chrome-in-umbrel",
+    "support": "https://github.com/maddog1110/Chrome-in-umbrel/issues",
+    "port": 3000,
+    "gallery": [
+        "./i/Untitled.png",
+        "./i/google.png",
+        "./i/amazon.png"
+    ],
+    "path": "",
+    "defaultUsername": "admin",
+    "defaultPassword": "umbrel123",
+    "icon": "./i/chrome.png",
+    "tagline": "Browse securely with LinuxServer.io's Chromium",
+    "submitter": "maddog11010",
+    "releaseNotes": "Initial release with secure remote access and automatic startup"
+}
