@@ -8,9 +8,9 @@ services:
       - PGID=1000
       - TZ=Etc/UTC
       - CHROME_CLI=--no-sandbox --start-maximized
-      - CUSTOM_PORT=3001
+      - CUSTOM_PORT=3004
       - CUSTOM_USER=admin
       - CUSTOM_PASS=umbrel123
     ports:
-      - "3001:3001"
+      - "3004:3004"
     restart: unless-stopped
